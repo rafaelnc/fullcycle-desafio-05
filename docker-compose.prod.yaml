@@ -6,7 +6,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.prod
-    entrypoint:  npm run start:prod
+    entrypoint: ./.docker/entrypoint.sh
     container_name: nest-app
     
     ports:
