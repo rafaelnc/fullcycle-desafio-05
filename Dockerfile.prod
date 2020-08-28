@@ -10,8 +10,10 @@ COPY . .
 
 COPY --chown=node ./ .
 
+RUN npm i -g @nestjs/cli@7.4.1
+
 RUN npm install
 
 RUN npm run build
 
-ENTRYPOINT ["npm", "run", "start:prod"]
+CMD ["npm", "run", "start:prod"]
