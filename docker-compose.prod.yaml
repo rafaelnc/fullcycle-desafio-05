@@ -3,7 +3,9 @@ version: '3'
 services:
 
   app:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile.prod
     entrypoint: ./.docker/entrypoint.sh
     container_name: nest-app
     environment:
@@ -15,3 +17,4 @@ services:
     
 
   
+
